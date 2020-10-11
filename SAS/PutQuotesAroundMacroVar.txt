@@ -1,0 +1,3 @@
+%let start_date=11/27/2001;
+
+%let newdate=%unquote(%str(%'&start_date%'));

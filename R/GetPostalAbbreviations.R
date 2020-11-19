@@ -14,10 +14,13 @@
 # ****************************************************************************
 
 library(rvest)
-functions<-getStates(){
-URL<-"https://pe.usps.com/text/pub28/28apb.htm"
+getStates <- function(){
+URL <- "https://pe.usps.com/text/pub28/28apb.htm"
 abbreviations <- read_html(URL) %>% 
   html_nodes("table") %>% 
   `[[`(4) %>% 
   html_table() %>% rename(state_name=1, state_abbreviation = 2)
+abbreviations
 }
+
+#getStates()
